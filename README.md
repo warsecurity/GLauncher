@@ -2,7 +2,7 @@
 
 <img width="100" src="app/src/main/ic_launcher-playstore.png" alt="YagniLauncher" align="center">
 
-# Yagn Launcher changed to •• Glauncher
+#  Glauncher
 
 Stock Android Launcher From Scratch
 
@@ -55,7 +55,6 @@ If it's not something you need, it's not in the app. That's the whole philosophy
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" width=19% alt="4">](fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg)
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" width=19% alt="5">](fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg)
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" width=19% alt="6">](fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg" width=19% alt="7">](fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg)
 
 </div>
 
