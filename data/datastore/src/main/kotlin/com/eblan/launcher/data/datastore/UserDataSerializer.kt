@@ -50,9 +50,9 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
     }.build()
 
     private val defaultGridItemSettingsProto = GridItemSettingsProto.newBuilder().apply {
-        iconSize = 50
+        iconSize = 58
         textColorProto = TextColorProto.TextColorSystem
-        textSize = 10
+        textSize = 12
         showLabel = true
         singleLineLabel = true
         horizontalAlignmentProto = HorizontalAlignmentProto.CenterHorizontally
@@ -60,7 +60,7 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
         customTextColor = 0x00000000
         customBackgroundColor = 0x00000000
         padding = 0
-        cornerRadius = 0
+        cornerRadius = 16
     }.build()
 
     private val defaultHomeSettingsProto = HomeSettingsProto.newBuilder().apply {
@@ -82,7 +82,7 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
         folderCellHeight = 96
         maxFolderColumns = 5
         maxFolderRows = 4
-        showPageIndicator = false
+        showPageIndicator = true
         dockCustomBackgroundColor = 0x00000000
         dockPadding = 0
         dockTopStartCornerRadius = 0
@@ -103,7 +103,7 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
         excludeTaggedApps = false
         showKeyboard = false
         fuzzySearch = false
-        blurBehind = false
+        blurBehind = true
     }.build()
 
     private val defaultGestureSettingsProto = GestureSettingsProto.newBuilder().apply {

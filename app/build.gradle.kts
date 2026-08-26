@@ -24,6 +24,15 @@ plugins {
 android {
     namespace = "com.eblan.launcher"
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/root/launcher/release-key.jks")
+            storePassword = System.getenv("YAGNI_KEYSTORE_PASSWORD") ?: "changeme"
+            keyAlias = "yagni-release"
+            keyPassword = System.getenv("YAGNI_KEY_PASSWORD") ?: "changeme"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.eblan.launcher"
         versionCode = 93
@@ -40,6 +49,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",

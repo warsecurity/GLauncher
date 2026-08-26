@@ -41,6 +41,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
@@ -273,6 +274,7 @@ internal fun EblanApplicationInfoGridItem(
                 .build(),
             contentDescription = null,
             modifier = Modifier.size(appDrawerSettings.gridItemSettings.iconSize.dp)
+                .clip(RoundedCornerShape(size = appDrawerSettings.gridItemSettings.cornerRadius.dp))
                 .alpha(alpha)
                 .drawWithContent {
                     graphicsLayer.record {

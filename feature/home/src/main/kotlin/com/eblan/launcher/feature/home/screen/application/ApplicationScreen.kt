@@ -168,11 +168,18 @@ internal fun ApplicationScreen(
                 shape = RoundedCornerShape(cornerSize)
             }
             .fillMaxSize(),
-        color = when (appDrawerSettings.backgroundColor) {
-            BackgroundColor.System -> MaterialTheme.colorScheme.surface
-            BackgroundColor.Light -> Color.White
-            BackgroundColor.Dark -> Color.Black
-            BackgroundColor.Custom -> Color(appDrawerSettings.customBackgroundColor)
+        color = run {
+            val baseColor = when (appDrawerSettings.backgroundColor) {
+                BackgroundColor.System -> MaterialTheme.colorScheme.surface
+                BackgroundColor.Light -> Color.White
+                BackgroundColor.Dark -> Color.Black
+                BackgroundColor.Custom -> Color(appDrawerSettings.customBackgroundColor)
+            }
+            if (appDrawerSettings.blurBehind) {
+                baseColor.copy(alpha = 0.55f)
+            } else {
+                baseColor
+            }
         },
     ) {
         when (appDrawerSettings.appDrawerType) {
