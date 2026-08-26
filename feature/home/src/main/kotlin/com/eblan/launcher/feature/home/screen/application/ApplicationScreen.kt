@@ -105,6 +105,7 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 import kotlin.time.Duration.Companion.milliseconds
@@ -580,7 +581,7 @@ private fun BlurBehindEffect(
 
     val progress = 1f - (swipeY / screenHeight).coerceIn(0f, 1f)
 
-    val radius = (progress * 20f).roundToInt()
+    val radius = ((progress * 20f).roundToInt() / 4) * 4
 
     DisposableEffect(key1 = window) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -602,12 +603,16 @@ private fun BlurBehindEffect(
         }
     }
 
-    SideEffect {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            window.attributes = window.attributes.apply {
-                blurBehindRadius = radius
+    LaunchedEffect(key1 = window) {
+        snapshotFlow { radius }
+            .distinctUntilChanged()
+            .collect { r ->
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    window.attributes = window.attributes.apply {
+                        blurBehindRadius = r
+                    }
+                }
             }
-        }
     }
 }
 

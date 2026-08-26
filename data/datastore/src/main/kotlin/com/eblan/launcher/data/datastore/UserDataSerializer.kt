@@ -51,7 +51,7 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
 
     private val defaultGridItemSettingsProto = GridItemSettingsProto.newBuilder().apply {
         iconSize = 58
-        textColorProto = TextColorProto.TextColorSystem
+        textColorProto = TextColorProto.TextColorLight
         textSize = 12
         showLabel = true
         singleLineLabel = true
