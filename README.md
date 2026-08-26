@@ -10,10 +10,10 @@ Stock Android Launcher From Scratch
 
 </div>
 
-> [!Help]
+> 
 > Contribute to Glauncher
-> [!NOTE]
-> FU Ai Meow 🐱
+> 
+>  Meow 🐱
 
 ## About The Project
 
