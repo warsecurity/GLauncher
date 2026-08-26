@@ -2,7 +2,7 @@
 
 <img width="100" src="app/src/main/ic_launcher-playstore.png" alt="YagniLauncher" align="center">
 
-# Yagni Launcher
+# Yagn Launcher changed to •• Glauncher
 
 Stock Android Launcher From Scratch
 
