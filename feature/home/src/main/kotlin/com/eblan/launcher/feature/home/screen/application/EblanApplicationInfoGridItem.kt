@@ -137,14 +137,7 @@ internal fun EblanApplicationInfoGridItem(
 
     val keyboardController = LocalSoftwareKeyboardController.current
 
-    val textColor = getAppDrawerGridItemTextColor(
-        backgroundColor = appDrawerSettings.backgroundColor,
-        customBackgroundColor = appDrawerSettings.customBackgroundColor,
-        textColor = appDrawerSettings.gridItemSettings.textColor,
-        customTextColor = appDrawerSettings.gridItemSettings.customTextColor,
-        systemTextColor = systemTextColor,
-        systemCustomTextColor = systemCustomTextColor,
-    )
+    val textColor = androidx.compose.ui.graphics.Color.White
 
     val maxLines = if (appDrawerSettings.gridItemSettings.singleLineLabel) 1 else Int.MAX_VALUE
 

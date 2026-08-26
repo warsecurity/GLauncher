@@ -103,7 +103,7 @@ class UserDataSerializer @Inject constructor() : Serializer<UserDataProto> {
         excludeTaggedApps = false
         showKeyboard = false
         fuzzySearch = false
-        blurBehind = true
+        blurBehind = false
     }.build()
 
     private val defaultGestureSettingsProto = GestureSettingsProto.newBuilder().apply {

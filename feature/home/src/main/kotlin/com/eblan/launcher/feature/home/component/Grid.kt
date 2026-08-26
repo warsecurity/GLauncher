@@ -130,11 +130,13 @@ private fun GridLayoutItem(
     animate: Boolean,
     content: @Composable (BoxScope.(GridItem) -> Unit),
 ) {
-    val width = gridItem.columnSpan * cellWidth
-    val height = gridItem.rowSpan * cellHeight
+    val spacing = 12
 
-    val x = gridItem.startColumn * cellWidth
-    val y = gridItem.startRow * cellHeight
+    val width = (gridItem.columnSpan * cellWidth) - spacing
+    val height = (gridItem.rowSpan * cellHeight) - spacing
+
+    val x = (gridItem.startColumn * cellWidth) + (spacing / 2)
+    val y = (gridItem.startRow * cellHeight) + (spacing / 2)
 
     val animatedWidth by animateIntAsState(
         targetValue = width,

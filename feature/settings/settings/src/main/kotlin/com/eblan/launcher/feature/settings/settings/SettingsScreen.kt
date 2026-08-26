@@ -128,7 +128,6 @@ internal fun SettingsScreen(
                     .padding(10.dp),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
-                AlphaWarningCard()
 
                 items.forEachIndexed { index, settingsItem ->
                     SettingsItemContent(

@@ -176,11 +176,9 @@ internal fun ApplicationScreen(
                 BackgroundColor.Dark -> Color.Black
                 BackgroundColor.Custom -> Color(appDrawerSettings.customBackgroundColor)
             }
-            if (appDrawerSettings.blurBehind) {
-                baseColor.copy(alpha = 0.55f)
-            } else {
-                baseColor
-            }
+            // Wallpaper stays visible through the drawer regardless of the
+            // expensive live compositor blur toggle below.
+            baseColor.copy(alpha = 0.55f)
         },
     ) {
         when (appDrawerSettings.appDrawerType) {

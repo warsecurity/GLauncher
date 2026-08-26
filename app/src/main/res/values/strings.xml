@@ -16,6 +16,6 @@
   ~
   -->
 <resources>
-    <string name="app_name">Yagni Launcher</string>
+    <string name="app_name">Glauncher</string>
     <string name="action_name">Yagni Action</string>
 </resources>

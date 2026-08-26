@@ -148,19 +148,7 @@ internal fun InteractiveGridItem(
         gridItemSettings
     }
 
-    val currentTextColor = if (gridItem.override) {
-        getGridItemTextColor(
-            gridItemCustomTextColor = currentGridItemSettings.customTextColor,
-            gridItemTextColor = currentGridItemSettings.textColor,
-            systemCustomTextColor = gridItemSettings.customTextColor,
-            systemTextColor = textColor,
-        )
-    } else {
-        getTextColor(
-            customTextColor = currentGridItemSettings.customTextColor,
-            textColor = textColor,
-        )
-    }
+    val currentTextColor = androidx.compose.ui.graphics.Color.White
 
     val hasInteraction = isSelected && isVisibleOverlay
 
