@@ -25,7 +25,7 @@ Closed-source launchers are locking features behind paywalls and adding trackers
 
 The launcher is the first thing you see every time you unlock your phone. It shouldn't be slow, heavy, or draining your battery in the background.
 
-There are a lot of launchers out there. What sets Yagni Launcher apart is a relentless focus on performance and user experience over feature bloat.
+There are a lot of launchers out there. What sets GLauncher apart is a relentless focus on performance and user experience over feature bloat.
 
 GLauncher matches stock launcher functionality and goes beyond it, rebuilt from scratch with modern Android tooling.
 
