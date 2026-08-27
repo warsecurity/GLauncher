@@ -52,6 +52,10 @@ If it's not something you need, it's not in the app. That's the whole philosophy
 ## Documentation
 If you're interested in contributing to the project, Welcome.
 
+## Keep android Open
+
+https://keepandroidopen.org
+
 
 ## License
 **GLauncher** is licensed under the GNU General Public License v3.0. See the [license](LICENSE)
